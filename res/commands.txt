@@ -1,0 +1,64 @@
+#loading the image
+load res/hand.ppm hand
+
+#brighten image
+brighten 50 hand hand-brighter
+save res/hand-brighter-50.ppm hand-brighter
+
+#darken image
+brighten -50 hand hand-darken
+save res/hand-darken-50.ppm hand-darken
+
+#vertical-flip
+vertical-flip hand hand-vertical
+save res/hand-vertical.ppm hand-vertical
+
+#horizontal-flip and vertical-flip
+horizontal-flip hand-vertical hand-vertical-horizontal
+save res/hand-vertical-horizontal.ppm hand-vertical-horizontal
+
+#horizontal-flip
+horizontal-flip hand hand-horizontal
+save res/hand-horizontal.ppm hand-horizontal
+
+#vertical-flip and horizontal-flip
+vertical-flip hand-horizontal hand-horizontal-vertical
+save res/hand-horizontal-vertical.ppm hand-horizontal-vertical
+
+#greyscale red-component
+greyscale red-component hand hand-red-greyscale
+save res/hand-red-greyscale.ppm hand-red-greyscale
+
+#greyscale green-component
+greyscale green-component hand hand-green-greyscale
+save res/hand-green-greyscale.ppm hand-green-greyscale
+
+#greyscale blue-component
+greyscale blue-component hand hand-blue-greyscale
+save res/hand-blue-greyscale.ppm hand-blue-greyscale
+
+#greyscale luma-component
+greyscale luma-component hand hand-luma-greyscale
+save res/hand-luma-greyscale.ppm hand-luma-greyscale
+
+#greyscale intensity-component
+greyscale intensity-component hand hand-intensity-greyscale
+save res/hand-intensity-greyscale.ppm hand-intensity-greyscale
+
+#greyscale value-component
+greyscale value-component hand hand-value-greyscale
+save res/hand-value-greyscale.ppm hand-value-greyscale
+
+#Flipping the image 4 times to get the same image
+load res/hand.ppm hand
+horizontal-flip hand hand-horizontal-1
+horizontal-flip hand-horizontal-1 hand-horizontal-2
+horizontal-flip hand-horizontal-2 hand-horizontal-3
+horizontal-flip hand-horizontal-3 hand-horizontal-4
+save res/hand-horizontal-4.ppm hand-horizontal-4
+
+#Random operations on the image
+load res/hand.ppm hand
+greyscale blue-component hand hand-blue-greyscale
+vertical-flip hand-blue-greyscale hand-blue-greyscale-vertical
+save res/hand-blue-greyscale-vertical.ppm hand-blue-greyscale-vertical
