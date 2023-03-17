@@ -1,0 +1,4 @@
+load res/image.ppm image
+horizontal-flip image image-horizontal
+# saves the image
+save image-horizontal-test.ppm image-horizontal
