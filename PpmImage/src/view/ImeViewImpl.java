@@ -8,26 +8,26 @@ import java.io.PrintStream;
  */
 public class ImeViewImpl implements ImeView {
 
-    private OutputStream out;
+  private OutputStream out;
 
-    /**
-     * Constructor for the ImeViewImpl class.
-     *
-     * @param out is the output from the view methods.
-     */
-    public ImeViewImpl(OutputStream out) {
-        this.out = out;
+  /**
+   * Constructor for the ImeViewImpl class.
+   *
+   * @param out is the output from the view methods.
+   */
+  public ImeViewImpl(OutputStream out) {
+    this.out = out;
 
-    }
+  }
 
-    /**
-     * This method will display the output from the model to the user.
-     *
-     * @param s is the string value to be displayed.
-     */
-    @Override
-    public void display(String s) {
-        PrintStream outStream = new PrintStream(this.out);
-        outStream.printf(s + "\n");
-    }
+  /**
+   * This method will display the output from the model to the user.
+   *
+   * @param s is the string value to be displayed.
+   */
+  @Override
+  public void display(String s) {
+    PrintStream outStream = new PrintStream(this.out);
+    outStream.printf(s + "\n");
+  }
 }
